@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 78vh;
+}
+div.chart-container {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  google-chart {
+    height: 100%;
+    width: 100%;
+    // flex-shrink: 1;
+  }
+}
+p {
+  white-space: pre-line; // for \n
+  // white-space: pre-wrap; // for \n and \t
+}

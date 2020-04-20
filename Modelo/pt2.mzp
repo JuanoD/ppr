@@ -1,0 +1,65 @@
+{
+    "builtinSolverConfigs": [
+    ],
+    "openFiles": [
+        "proyecto_pt2.mzn",
+        "data/Desenfreno2.dzn",
+        "data/Trivial2.dzn",
+        "data/Med2-1.dzn",
+        "data/Med2-2.dzn",
+        "data/Med2-3.dzn",
+        "data/Med2-4.dzn",
+        "data/Med2-5.dzn"
+    ],
+    "openTab": 7,
+    "projectFiles": [
+        "data/Desenfreno2.dzn",
+        "data/Med2-1.dzn",
+        "data/Med2-2.dzn",
+        "data/Med2-3.dzn",
+        "data/Med2-4.dzn",
+        "data/Med2-5.dzn",
+        "data/Trivial2.dzn",
+        "proyecto_pt2.mzn"
+    ],
+    "projectSolverConfigs": [
+        {
+            "additionalCompilerCommandline": "",
+            "additionalData": "",
+            "clearOutputWindow": false,
+            "compressSolutionOutput": 100,
+            "defaultBehavior": true,
+            "extraOptions": {
+                "-a-d": "2",
+                "-c-d": "8",
+                "-decay": "0.99",
+                "-fail": "0",
+                "-node": "0",
+                "-nogoods": "false",
+                "-nogoods-limit": "128",
+                "-restart": "none",
+                "-restart-base": "1.5",
+                "-restart-scale": "250"
+            },
+            "flatteningStats": false,
+            "freeSearch": false,
+            "id": "org.gecode.gecode",
+            "nThreads": 4,
+            "name": "Gecode 6.1.1 optimized 4 threads",
+            "optimizationLevel": 3,
+            "outputTiming": false,
+            "printIntermediate": false,
+            "runSolutionChecker": true,
+            "solverFlags": "",
+            "solvingStats": true,
+            "stopAfter": 1,
+            "timeLimit": 0,
+            "useExtraOptions": false,
+            "verboseFlattening": false,
+            "verboseSolving": false,
+            "version": "6.1.1"
+        }
+    ],
+    "selectedProjectConfig": 0,
+    "version": 105
+}

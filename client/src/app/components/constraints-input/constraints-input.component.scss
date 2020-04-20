@@ -1,0 +1,223 @@
+.form-root {
+  /* Chrome, Safari, Edge, Opera */
+  input.no-arrows::-webkit-outer-spin-button,
+  input.no-arrows::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Firefox */
+  input[type="number"].no-arrows {
+    -moz-appearance: textfield;
+  }
+  overflow: auto;
+  max-height: 78vh;
+  .row {
+    margin: 0;
+  }
+}
+.dislikes {
+  position: relative;
+  .mid-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .form-row {
+    width: 100%;
+    margin: 0.2em 0;
+  }
+}
+.constraints,
+.actor-properties {
+  justify-content: center;
+}
+.constraints {
+  .form-row.sticky-container {
+    flex-wrap: nowrap;
+    margin: 0.5em 0;
+    width: max-content;
+  }
+  .col {
+    min-width: 48px;
+    align-content: center;
+  }
+  .sd {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+    * {
+      margin-bottom: 0.1em;
+    }
+    & > * {
+      width: 7em;
+      margin-left: 1em;
+    }
+    .sd-input-group {
+      width: 6em;
+      min-width: 5.5em;
+      margin: 0 0.5em;
+      input[type="number"] {
+        min-width: 3em;
+      }
+    }
+  }
+  .fields {
+    overflow-x: auto;
+    overflow-y: auto;
+    width: auto;
+  }
+  .actor {
+    position: sticky;
+    left: 0;
+    min-width: 10em;
+    max-width: 30em;
+    padding-left: 0;
+    justify-content: center;
+    z-index: 3;
+  }
+  .prop {
+    min-width: 6em;
+  }
+  .scenes {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+.properties-head {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.6em auto;
+  justify-content: center;
+  align-content: center;
+  &>div {
+    margin: auto 1em;
+    &>div {
+      margin: 0 auto;
+      flex-wrap: nowrap;
+      min-width: 6em;
+    }
+  }
+}
+
+div.checkbox {
+  position: relative;
+  height: 100%;
+  min-width: 48px;
+  justify-content: center;
+  align-content: center;
+  max-width: 48px;
+  input[type="checkbox"] {
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+    & ~ label {
+      font-weight: bold;
+      background: #eee;
+      text-align: center;
+      color: rgb(112, 112, 112);
+      z-index: 1;
+    }
+    &:checked {
+      & ~ label {
+        background: #2196f3;
+        color: #eee;
+      }
+      &:hover ~ label {
+        background: rgb(76, 152, 214);
+      }
+    }
+    &:hover ~ label {
+      background: #ccc;
+    }
+  }
+  input,
+  label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 2em;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+/*
+.table-fix-head {
+  overflow-y: auto;
+  tbody {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
+  tbody th {
+    display: flex;
+    position: sticky;
+    left: 0;
+    z-index: 3;
+    min-width: 10em;
+    align-items: center;
+    input {
+      width: 100%;
+    }
+  }
+  tr {
+    display: flex;
+    align-self: stretch;
+    justify-content: space-between;
+    height: 3em;
+  }
+  td {
+    width: 3em;
+    height: 100%;
+    margin: auto;
+    div {
+      position: relative;
+      height: 100%;
+      min-width: 48px;
+      input {
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+        & ~ label {
+          font-weight: bold;
+          background: #eee;
+          text-align: center;
+          color: rgb(112, 112, 112);
+          z-index: 1;
+        }
+        &:checked {
+          & ~ label {
+            background: #2196f3;
+            color: #eee;
+          }
+          &:hover ~ label {
+            background: rgb(76, 152, 214);
+          }
+        }
+        &:hover ~ label {
+          background: #ccc;
+        }
+      }
+      input,
+      label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 2em;
+        height: 2em;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    }
+  }
+}
+*/
