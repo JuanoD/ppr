@@ -1,0 +1,8 @@
+layer: application
+language: javascript
+stack: frontend
+
+tasks:
+  dev:
+    command: vite --host
+    preset: server

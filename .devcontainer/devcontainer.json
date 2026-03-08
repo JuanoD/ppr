@@ -1,0 +1,23 @@
+{
+  "name": "PPR Development",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "."
+  },
+  "forwardPorts": [3000, 4200],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "moonrepo.moon-console",
+        "redhat.vscode-yaml",
+        "svelte.svelte-vscode"
+      ]
+    }
+  },
+  "postCreateCommand": "bun install",
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind"
+}

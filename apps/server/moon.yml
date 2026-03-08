@@ -1,0 +1,8 @@
+layer: application
+language: javascript
+stack: backend
+
+tasks:
+  dev: 
+    command: bun --watch src/index.ts
+    preset: server

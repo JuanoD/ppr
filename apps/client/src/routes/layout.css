@@ -1,0 +1,19 @@
+@import 'tailwindcss';
+@import "@catppuccin/tailwindcss/mocha.css";
+
+:root {
+	background-color: theme(--color-ctp-base);
+	color: theme(--color-ctp-text);
+}
+
+@layer utilities {
+	input[type='number']::-webkit-inner-spin-button,
+	input[type='number']::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	input[type='number'] {
+		-moz-appearance: textfield;
+	}
+}

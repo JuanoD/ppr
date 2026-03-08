@@ -1,0 +1,6 @@
+# language: 'typescript'
+
+projects:
+  globs:
+    - 'apps/*'
+    - packages/*
