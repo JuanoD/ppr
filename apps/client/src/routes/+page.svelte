@@ -3,7 +3,7 @@
 	import InputForm from '$lib/components/InputForm.svelte';
 
 	function handleSolve(data: string) {
-		goto(`/result?data=${btoa(data)}`);
+		goto(`/result?data=${data}`);
 	}
 </script>
 

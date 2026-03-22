@@ -10,6 +10,7 @@
       "extensions": [
         "bradlc.vscode-tailwindcss",
         "dbaeumer.vscode-eslint",
+        "effectful-tech.effect-vscode",
         "esbenp.prettier-vscode",
         "moonrepo.moon-console",
         "redhat.vscode-yaml",
@@ -17,6 +18,7 @@
       ]
     }
   },
+  "runArgs": ["--add-host=host.docker.internal:host-gateway"],
   "postCreateCommand": "bun install",
   "workspaceFolder": "/workspace",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind"

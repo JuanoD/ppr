@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@ppr/worker": ["./src/index.ts"],
+      "@ppr/worker/*": ["./src/*"]
+    }
+  }
+}

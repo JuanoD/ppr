@@ -11,13 +11,9 @@
     "lint": "eslint .",
     "test": "bun test"
   },
-  "dependencies": {
+  "peerDependencies": {
     "effect": "catalog:",
     "@effect/platform-bun": "catalog:"
   },
-  "devDependencies": {
-    "@types/node": "^22.10.5",
-    "typescript": "^5.7.2",
-    "bun-types": "^1.1.0"
-  }
+  "devDependencies": {}
 }

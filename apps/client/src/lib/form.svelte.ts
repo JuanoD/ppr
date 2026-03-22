@@ -100,12 +100,12 @@ function createActors(count: number, scenes: number): Actor[] {
 	}));
 }
 
-function setArrayLength<T>(array: T[], desiredLength: number, defaultValue: T) {
-	return [...array, ...Array(Math.max(0, desiredLength - array.length)).fill(defaultValue)].slice(
-		0,
-		desiredLength
-	);
-}
+// function setArrayLength<T>(array: T[], desiredLength: number, defaultValue: T) {
+// 	return [...array, ...Array(Math.max(0, desiredLength - array.length)).fill(defaultValue)].slice(
+// 		0,
+// 		desiredLength
+// 	);
+// }
 
 export function buildDznString(
 	actors: Actor[],

@@ -1,4 +1,5 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
@@ -15,9 +16,10 @@
     "noFallthroughCasesInSwitch": true,
     "types": ["bun-types"],
     "paths": {
-      "@ppr/api/*": ["../../packages/api/src/*"],
-      "@ppr/api": ["../../packages/api/src/index.ts"]
+      "@ppr/api": ["../../packages/api/src/index.ts"],
+      "@ppr/api/*": ["../../packages/api/src/*"]
     }
   },
+  "references": [{ "path": "../../packages/api/tsconfig.json" }],
   "include": ["src/**/*.ts"]
 }

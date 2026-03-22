@@ -4,5 +4,5 @@ stack: frontend
 
 tasks:
   dev:
-    command: vite --host
+    command: vite dev --host
     preset: server

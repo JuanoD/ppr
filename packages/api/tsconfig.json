@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "paths": {
+      "@ppr/api": ["./src/index.ts"],
+      "@ppr/api/*": ["./src/*"]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+layer: application
+language: javascript
+stack: backend
+
+tasks:
+  dev:
+    command: bun run --watch src/index.ts
+    preset: server
+    env: 
+      DB_URL: "postgres://postgres:postgres@host.docker.internal:5433/effect"

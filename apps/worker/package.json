@@ -1,0 +1,23 @@
+{
+  "name": "@ppr/worker",
+  "version": "0.0.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "lint": "eslint .",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "effect": "catalog:",
+    "@effect/platform-bun": "catalog:",
+    "@effect/sql-pg": "catalog:",
+    "@ppr/db": "*",
+    "@ppr/solver": "*",
+    "@ppr/workflow": "*"
+  },
+  "devDependencies": {}
+}

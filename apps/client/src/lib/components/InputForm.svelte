@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { runEffect, solve } from '$lib/api-client';
+	import { runEffect, solve, solveCluster } from '$lib/api-client';
 	import { buildDznString, FormState } from '$lib/form.svelte';
 	import Quantity from './Quantity.svelte';
 	import Scenes from './Scenes.svelte';
@@ -8,7 +8,6 @@
 	import { Effect } from 'effect';
 	import Dialog from './Dialog.svelte';
 	import Button from './Button.svelte';
-	import { variance } from 'd3';
 
 	interface Props {
 		onSolution: (data: string) => void;
@@ -22,6 +21,8 @@
 	let actorNames = $derived(formState.actors.map((v) => v.name));
 
 	async function handleSubmit(inputString: string) {
+		const id = await solveCluster(inputString).pipe(runEffect.runPromise);
+		return onSolution(id);
 		isLoading = true;
 		try {
 			await solve(inputString).pipe(
@@ -63,7 +64,7 @@
 
 	<div class="">
 		<h3 class="p-2 text-xl font-bold">Scene Lengths</h3>
-		<Scenes scenes={formState.scenes} />
+		<Scenes bind:scenes={formState.scenes} />
 	</div>
 
 	<div class="actors">
@@ -130,7 +131,12 @@
 		<textarea name="data" class="w-full overflow-auto rounded-lg bg-ctp-crust p-4" rows="12"
 		></textarea>
 		<div class="flex gap-4">
-			<Button variant="red" type="button" onclick={() => (showStringModal = false)}>Close</Button
+			<Button
+				variant="red"
+				type="button"
+				onclick={() => {
+					showStringModal = false;
+				}}>Close</Button
 			>
 			<Button variant="blue">Submit</Button>
 		</div>

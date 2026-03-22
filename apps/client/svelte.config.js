@@ -8,8 +8,11 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter(),
 		alias: {
-			"@ppr/api": "../../packages/api/src/index.ts",
-			"@ppr/api/*": "../../packages/api/src/*",
+			'@ppr/api': '../../packages/api/src/index.ts',
+			'@ppr/api/*': '../../packages/api/src/*'
+		},
+		experimental: {
+			async: true
 		}
 	}
 };

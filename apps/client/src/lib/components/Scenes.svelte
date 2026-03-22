@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { scenes }: { scenes: number[] } = $props();
+	let { scenes = $bindable([]) }: { scenes: number[] } = $props();
 </script>
 
 <div class="flex flex-wrap gap-2">

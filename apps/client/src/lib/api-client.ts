@@ -31,4 +31,24 @@ export const solve = (data: string) =>
 		return res;
 	});
 
+export const solveCluster = (data: string) =>
+	Effect.gen(function* () {
+		const client = yield* ApiClient;
+
+		const res = yield* client.schedules.solveStringInWorkflow({
+			payload: data
+		});
+		return res;
+	});
+
+export const retrieveClusterResult = (data: string) =>
+	Effect.gen(function* () {
+		const client = yield* ApiClient;
+
+		const res = yield* client.schedules.getSolveResult({
+			params: { id: data }
+		});
+		return res;
+	});
+
 export const runEffect = ManagedRuntime.make(ApiClient.layer);

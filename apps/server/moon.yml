@@ -6,3 +6,5 @@ tasks:
   dev: 
     command: bun --watch src/index.ts
     preset: server
+    env: 
+      DB_URL: "postgres://postgres:postgres@host.docker.internal:5433/effect"

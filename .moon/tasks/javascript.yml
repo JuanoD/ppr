@@ -1,0 +1,23 @@
+tasks:
+  build:
+    command: "bun run build"
+    inputs:
+      - "@globs(src/**/*.ts)"
+
+  # dev:
+  #   command: "bun run dev"
+  #   options:
+  #     runInCI: false
+
+  typecheck:
+    command: "tsc"
+
+  lint:
+    command: "bun run lint"
+    inputs:
+      - "@globs(src/**/*.ts)"
+
+  test:
+    command: "bun run test"
+    inputs:
+      - "@globs(src/**/*.ts)"
